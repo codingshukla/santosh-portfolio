@@ -1,0 +1,214 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: lowercase;
+}
+
+.section h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.profile-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    filter: grayscale(100%);
+}
+
+.about-content p {
+    text-align: left;
+}
+
+/* Experience Section */
+.experience-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+.experience-column {
+    text-align: left;
+}
+
+.experience-column h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.experience-img {
+    width: 300px;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: grayscale(100%);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.project-card p {
+    font-size: 1rem;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .section h1 {
+        font-size: 3rem;
+    }
+
+    .section h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content, .experience-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img, .experience-img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
